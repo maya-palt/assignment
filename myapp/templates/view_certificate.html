@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Certificate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .certificate {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .download-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <img src="/path/to/your/logo.png" alt="Award Logo" class="logo">
+        <h1>Certificate of Achievement</h1>
+        <p><strong>Name:</strong> {{ certificate.name }}</p>
+        <p><strong>Description:</strong> {{ certificate.description }}</p>
+        <p><strong>Issued Date:</strong> {{ certificate.created_at }}</p>
+        <p>This is to certify that {{ certificate.name }} has been awarded the Certificate of Achievement for outstanding performance in academics at our school.</p>
+        <p>This certificate is presented as a recognition of their hard work and dedication towards their studies.</p>
+        <p>Congratulations on this remarkable achievement!</p>
+    </div>
+
+    <!-- Add the link to download the PDF certificate -->
+    <a href="{% url 'generate_certificate_pdf' certificate.id %}" class="download-link" target="_blank">Download PDF</a>
+
+    <div class="footer">
+        <p>© Your School Name | All rights reserved</p>
+    </div>
+</body>
+</html>

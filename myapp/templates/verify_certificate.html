@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate</title>
+</head>
+<body>
+    <h1>Verify Certificate</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="certificate_id">Certificate ID:</label>
+        <input type="text" id="verification_id" name="verification_id" required>
+
+        <!-- Optional: Include the JWT token input if you want to verify JWT token as well -->
+        <!-- <label for="jwt_token">JWT Token:</label>
+        <input type="text" id="jwt_token" name="jwt_token">
+        <br> -->
+
+        <input type="submit" value="Verify">
+    </form>
+</body>
+</html>

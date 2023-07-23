@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Certificate</title>
+    <style>
+        body {
+            background-color: darkred;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            overflow: hidden; /* Make the page non-scrollable */
+        }
+
+        .certificate {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0099ff;
+            text-transform: uppercase;
+        }
+
+        strong {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate">
+        <h1>Certificate of Achievement</h1>
+        <strong>Name:</strong> {{ certificate.name }}<br>
+        <strong>Description:</strong> {{ certificate.description }}<br>
+        <strong>Issued Date:</strong> {{ certificate.created_at }}<br><br>
+
+        This is to certify that {{ certificate.name }} has been awarded the Certificate of Achievement for outstanding performance in academics at our school.<br>
+        This certificate is presented as a recognition of their hard work and dedication towards their studies.<br><br>
+
+        Congratulations on this remarkable achievement!<br><br>
+
+        Principal<br><br>
+
+        Note: This is a digitally generated certificate and does not require any physical signature.
+    </div>
+</body>
+</html>

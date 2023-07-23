@@ -1,0 +1,20 @@
+<!-- templates/verification_result.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certificate Verification Result</title>
+</head>
+<body>
+    {% if certificate %}
+        <h1>Certificate Verification Result</h1>
+        <p>Certificate ID: {{ certificate.id }}</p>
+        <p>Name: {{ certificate.name }}</p>
+        <p>Description: {{ certificate.description }}</p>
+        <!-- Add other certificate details as needed -->
+    {% else %}
+        <h1>Certificate Verification Result</h1>
+        <p>Error: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
